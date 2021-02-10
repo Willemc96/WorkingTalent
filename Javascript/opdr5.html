@@ -1,0 +1,47 @@
+<html>
+    <script>
+        var countA = 0
+        var countB = 0
+        var countC = 0
+        var countD = 0
+        function functieA(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop A gedrukt <br>"
+            countA += 1
+            if (countA > 1){
+                alert("U heeft " + countA + " keer op knop A gedrukt")
+            }
+        }
+        function functieB(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop B gedrukt <br>"
+            countB += 1
+            if (countB > 1){
+                alert("U heeft " + countB + " keer op knop B gedrukt")
+            }
+        }
+        function functieC(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop C gedrukt <br>"
+            countC += 1
+            if (countC > 1){
+                alert("U heeft " + countC + " keer op knop C gedrukt")
+            }
+        }
+        function functieD(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop D gedrukt <br>"
+            countD += 1
+            if (countD > 1){
+                alert("U heeft " + countD + " keer op knop D gedrukt")
+            }
+        }
+    </script>
+    <body>
+        <input type=button value="A" onclick="functieA()">
+        <input type=button value="B" onclick="functieB()">
+        <input type=button value="C" onclick="functieC()">
+        <input type=button value="D" onclick="functieD()">
+        <div id="uitkomst"></div>
+    </body>
+</html>

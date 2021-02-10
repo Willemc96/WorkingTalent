@@ -1,0 +1,28 @@
+<html>
+    <script>
+        var i =2
+        function toonafbeelding(){
+            if (i%4 == 1) {
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg"
+                document.getElementById("img2").src = "https://i.pinimg.com/originals/1d/bb/84/1dbb847087ebf43636d62d1e21a46887.png"
+                i += 1
+            } else if (i%4 == 2) {
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/001/176/983/small/hello-summer-badge-and-tropical-beach.jpg"
+                document.getElementById("img2").src = "https://d2spvg5ctyssds.cloudfront.net/app/uploads/2016/06/attachment-KOE-regel-200x200.jpg"
+                i += 1
+            } else if (i% 4 == 3){
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/001/948/798/small/hello-autumn-with-flat-leaves-background-for-invitation-card-and-printing-purpose-vector.jpg"
+                document.getElementById("img2").src = "https://d2spvg5ctyssds.cloudfront.net/app/uploads/2016/06/attachment-KOE-regel-200x200.jpg"
+                i+=1
+            } else if (i% 4 == 0){
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/000/265/823/small/22_aGVsbG9fd2ludGVyX3NlYXNvbl9zZXRfaW52ZXJzZQ.jpg"
+                document.getElementById("img2").src = "https://d2spvg5ctyssds.cloudfront.net/app/uploads/2016/06/attachment-KOE-regel-200x200.jpg"
+                i += 1
+            }
+        }
+    </script>
+    <body>
+        <img id="img1" onclick="toonafbeelding()" src="https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg">
+        <img id="img2" src="https://i.pinimg.com/originals/1d/bb/84/1dbb847087ebf43636d62d1e21a46887.png">
+    </body>
+</html>>

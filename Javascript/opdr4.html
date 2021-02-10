@@ -1,0 +1,27 @@
+<html>
+    <script>
+        function functieA(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop A gedrukt <br>"
+        }
+        function functieB(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop B gedrukt <br>"
+        }
+        function functieC(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop C gedrukt <br>"
+        }
+        function functieD(){
+            var output = document.getElementById("uitkomst")
+            output.innerHTML += "U heeft op knop D gedrukt <br>"
+        }
+    </script>
+    <body>
+        <input type=button value="A" onclick="functieA()">
+        <input type=button value="B" onclick="functieB()">
+        <input type=button value="C" onclick="functieC()">
+        <input type=button value="D" onclick="functieD()">
+        <div id="uitkomst"></div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    Welkom bij galgje! <br>
+    <script>
+        var woord = "whiskyproducent"
+        var woord_lijst = []
+        var status_lijst = []
+
+        for (var i=0; i<woord.length; i++){
+            woord_lijst[i] = woord.slice(i, i+1)
+            status_lijst[i] = "_"
+        }
+
+        window.onload = teken_status
+
+        function teken_status(){
+            var output = document.getElementById("output")
+            var output2 = document.getElementById("output2")
+            for (var i=0; i<woord.length; i++){
+                output.innerHTML += status_lijst[i] + " "
+            }
+            output2.innerHTML = "U heeft nog 8 levens over!"
+        }
+
+        var count = 8
+        function raden(){
+            var output = document.getElementById("output")
+            var output2 = document.getElementById("output2")
+            var letter = document.getElementById("invoerveld").value
+            document.getElementById('invoerveld').value=""
+
+            if(woord_lijst.includes(letter)){
+                status_lijst[woord_lijst.indexOf(letter)] = woord_lijst[woord_lijst.indexOf(letter)]
+                woord_lijst[woord_lijst.indexOf(letter)] = "|"
+                output.innerHTML = ""
+                for (var i=0; i<woord_lijst.length; i++){
+                    output.innerHTML += status_lijst[i] + " "
+            }
+                if (!status_lijst.includes("_") & count > 0){
+                    alert("U heeft gewonnen!")
+                }
+            } else{
+                alert("Deze letter zit er niet in!")
+                count -= 1
+                output2.innerHTML = "U heeft nog " + Math.max(count,0) + " levens over!"
+                if (count==0){
+                    alert("U heeft verloren!")
+                }
+            }
+        }
+    </script>
+
+<body>
+    <div id="output"></div>
+    <br>
+    <input type=text id="invoerveld">
+    <input type=button id="knop" value="Raad letter" onclick="raden()">
+    <br>
+    <div id="output2"></div>
+</body>
+
+</html>

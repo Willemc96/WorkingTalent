@@ -1,0 +1,53 @@
+<html>
+    <script>
+        var i = 2
+        function toonafbeelding1(){
+            if (i%4 == 1) {
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg"
+                i += 1
+            } else if (i%4 == 2) {
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/001/176/983/small/hello-summer-badge-and-tropical-beach.jpg"
+                i += 1
+            } else if (i% 4 == 3){
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/001/948/798/small/hello-autumn-with-flat-leaves-background-for-invitation-card-and-printing-purpose-vector.jpg"
+                i+=1
+            }else if (i% 4 == 0){
+                document.getElementById("img1").src = "https://static.vecteezy.com/system/resources/thumbnails/000/265/823/small/22_aGVsbG9fd2ludGVyX3NlYXNvbl9zZXRfaW52ZXJzZQ.jpg"
+                i+=1
+            }
+        }
+        
+        var j = 2
+        function toonafbeelding2(){
+            if (j%4 == 1) {
+                document.getElementById("img2").src = "https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg"
+                j += 1
+            } else if (j%4 == 2) {
+                document.getElementById("img2").src = "https://static.vecteezy.com/system/resources/thumbnails/001/176/983/small/hello-summer-badge-and-tropical-beach.jpg"
+                j += 1
+            } else if (j% 4 == 3){
+                document.getElementById("img2").src = "https://static.vecteezy.com/system/resources/thumbnails/001/948/798/small/hello-autumn-with-flat-leaves-background-for-invitation-card-and-printing-purpose-vector.jpg"
+                j+=1
+            }else if (j% 4 == 0){
+                document.getElementById("img2").src = "https://static.vecteezy.com/system/resources/thumbnails/000/265/823/small/22_aGVsbG9fd2ludGVyX3NlYXNvbl9zZXRfaW52ZXJzZQ.jpg"
+                j += 1
+            }
+        }
+
+        function check(){
+            if (i%4 == j%4) {
+                console.log("Hetzelfde!")
+            } else {
+                console.log("Niet hetzelfde!")
+            }
+        }
+    </script>
+    <body>
+        <img id="img1" src="https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg">
+        <img id="img2" src="https://static.vecteezy.com/system/resources/thumbnails/000/202/176/small/59.jpg">
+        <br><br>
+        <button id="knop1" onclick="toonafbeelding1()">Klik door de seizoenen heen links</button>
+        <button id="knop2" onclick="toonafbeelding2()">Klik door de seizoenen heen rechts</button>
+        <button id="knop3" onclick="check()">Hetzelfde?</button>
+    </body>
+</html>

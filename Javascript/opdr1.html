@@ -1,0 +1,18 @@
+<html>
+    <script>
+        function hallodoei(){
+            var invoerwaarde = document.getElementById("invoer").value.toLowerCase()
+            if (invoerwaarde=="hallo"){
+                alert("Welkom!")
+            } else if (invoerwaarde=="doei"){
+                alert("Tot de volgende keer!")
+            } else {
+                ""
+            }
+        }
+    </script>
+    <body>
+        <input type=text id="invoer">
+        <input type=button id="knop" value="Klik!" onclick="hallodoei()">
+    </body>
+</html>
